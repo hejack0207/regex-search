@@ -2,6 +2,10 @@
 	background-color: #ff9632;
 }
 
+.__regexp_search_matched {
+	background-color: #009632;
+}
+
 .__regexp_search_count {
     position: fixed;
     top: 0;

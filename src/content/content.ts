@@ -166,6 +166,7 @@ module Content {
                     mark.appendChild(document.createTextNode(matches[i]));
 
                     parent.insertBefore(mark, before.nextSibling);
+                    mark.className = "__regexp_search_matched";
                     marks.push(mark);
                 }
                 var after = document.createTextNode(str.substring(pos));
@@ -204,7 +205,7 @@ module Content {
     function move(next: boolean): void {
         if (marks.length > 0) {
             console.assert(cur >= 0 && cur < marks.length);
-            marks[cur].className = "";
+            marks[cur].className = "__regexp_search_matched";
             if (next) {
                 nextMatch();
             } else {
